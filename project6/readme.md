@@ -53,3 +53,11 @@
 ## STEP5- i connected my databases in my mysqlserver via the mysqlclient interface using my password and the private ip of mysqlserver.
 ![Alt text](<image/successfully connected.png>)
 
+
+## NOTE: security group setting can slow this project down. ensure all outbound rules are set to allow all traffic only
+![alt text](image/outbound-security-group-setting.png)
+![alt text](image/calling-db-users.png)
+
+### thanks!
+
+
