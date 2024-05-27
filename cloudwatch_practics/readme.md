@@ -42,8 +42,23 @@ mem and disk percentage used are to be monitored
 ### STEP3 PROVISIONED EC2
 
 after provision the ec2 first i updated the machine, then installed unzip as the file for the cloudwatch agent to be installed in the machine is a ziped file.
-
+the role is attached to the EC2 and this help to give permission for the cloudwatch to monitor the EC2 resource.
 then ran the script and then start the agent and confirm its running .
+
+`sudo apt update`
+
+`sudo apt install unzip`
+
+`sudo nano script.sh`
+
+sudo chmod +x script.sh
+
+`./script.sh`
+
+`sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a start`
+
+`sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status`
+
 ![alt text](screenshoots_project/instance_lauched13.png)
 ![alt text](screenshoots_project/lauching_instance.png)
 ![alt text](screenshoots_project/attaching_ec2_role_created14.png)
@@ -53,16 +68,17 @@ then ran the script and then start the agent and confirm its running .
 ##### after this i installed unzip on the machine so that when the scritp is ran there will 
 be no issues 
 #### note if unzip is not install there will be error.
+![alt text](screenshoots_project/unzip_installed39.png)
 ![alt text](screenshoots_project/startcloundwatchAgent36.png)
 ![alt text](screenshoots_project/status_confirmed_running37.png)
 
 
 ### STEP4 CLOUDWATCH CONSOLE TO MONITOR THE EC2 METRIC
 
+All metrics was selected and cloudwatch agent selected and all the parameters monitored.
+
 ![alt text](screenshoots_project/to_use_d_CWAgent31.png)
 ![alt text](screenshoots_project/using_CWAgent32.png)
 ![alt text](screenshoots_project/using_CWAgent33.png)
 ![alt text](screenshoots_project/using_CWAgent34.png)
-
-
-here i selected all metrics and saw the CWA and all the parameters to be monitored.
+![alt text](screenshoots_project/startcloundwatchAgent36.png)
